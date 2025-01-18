@@ -14,3 +14,4 @@ class Notifs(models.Model):
     message = models.CharField(max_length=50)
     read = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now=False)
+    #ignore this line
