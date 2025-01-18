@@ -164,7 +164,7 @@ export default function Tile(){
                         </defs>
                     </svg></div>
                 <div>
-                    <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">Job 3</h3>
+                    <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">Job 4</h3>
                     <p class="text-base font-medium text-body-color">...</p>
                 </div>
             </div>
@@ -183,7 +183,7 @@ export default function Tile(){
                             fill="#6A64F1"></path>
                     </svg></div>
                 <div>
-                    <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">Job 4 &amp;
+                    <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">Job 5;
                         Encrypted</h3>
                     <p class="text-base font-medium text-body-color">...</p>
                 </div>
@@ -221,7 +221,7 @@ export default function Tile(){
                             fill="#6A64F1"></path>
                     </svg></div>
                 <div>
-                    <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">Job 5
+                    <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">Job 6
                     </h3>
                     <p class="text-base font-medium text-body-color">...</p>
                 </div>
