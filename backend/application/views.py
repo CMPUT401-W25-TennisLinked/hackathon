@@ -17,9 +17,24 @@ class JobApplicationsView(View):
 class JobApplicationFilterView(View):
 
     def get(self, request):
-        # TODO: get search params from request
-        applications = Application.objects.filter()
-        serializer = ApplicationSerializer(applications, many=True)
+        keyword = request.GET.get('keyword')
+        date = request.GET.get('date')
+        status = request.GET.get('status')
+
+        results = Application.objects.all()
+        
+        if keyword:
+            results = Application.objects.filter(company_name__icontains=keyword) | Application.objects.filter(position__icontains=keyword)
+        else:
+            results = Application.objects.all()
+
+            if date:
+                results = results.filter(date_applied__date=date)   # TODO: date filtering
+            
+            if status:
+                results = results.filter(status=status)
+        
+        serializer = ApplicationSerializer(results, many=True)
         return JsonResponse({'applications': serializer.data})
 
 
