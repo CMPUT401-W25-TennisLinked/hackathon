@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'notification',
     'response',
     'resume',
-    'user'
+    'user',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
