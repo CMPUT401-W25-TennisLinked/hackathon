@@ -1,10 +1,10 @@
 const Jobs = [
-    { name: 'Job 1', href: '#' },
-    { name: 'Job 2', href: '#' },
-    { name: 'Job 3', href: '#' },
-    { name: 'Job 4', href: '#' },
-    { name: 'Job 5', href: '#' },
-    { name: 'Job 6', href: '#' },
+    { name: 'Job 1', status:'Applied'},
+    { name: 'Job 2', status: 'Rejected' },
+    { name: 'Job 3', status: 'Interview' },
+    { name: 'Job 4', status: 'Rejected' },
+    { name: 'Job 5', status: 'Interview' },
+    { name: 'Job 6', status: 'Offer' },
   ]
 
 export default function JobMenu(){
@@ -23,7 +23,7 @@ export default function JobMenu(){
             <div class="w-full px-4 md:w-1/2 lg:w-3/2">
             <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
                 <div style={{background:'rgb(199, 206, 212)',borderRadius:'15px',color: 'black',
-                    justifyContent:'center',alignContent:'center',display:'flex',fontFamily:'monospace',fontSize:'15px'}}>Applied</div>
+                    justifyContent:'center',alignContent:'center',display:'flex',fontFamily:'monospace',fontWeight:'bold',fontSize:'15px'}}>{item.status}</div>
                 <div class="mx-auto mt-5 mb-auto inline-block">     
                     
                     <svg
