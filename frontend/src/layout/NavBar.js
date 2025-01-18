@@ -22,7 +22,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
   }
 
-export default function Header(){
+export default function NavBar(){
     // Code for the header + navigation bar from https://tailwindui.com/components
     return(<div className="min-h-full">
         <Disclosure as="nav" className="bg-white-800">
@@ -151,14 +151,7 @@ export default function Header(){
           </DisclosurePanel>
         </Disclosure>
     
-        <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold font-sans tracking-tight text-gray-900">Applied </h1>
-          </div>
-        </header>
-        <main>
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
-        </main>
+        
       </div>
     )
 }
