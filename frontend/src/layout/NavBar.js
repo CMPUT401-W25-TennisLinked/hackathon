@@ -40,7 +40,7 @@ export default function NavBar(){
                         href={item.href}
                         aria-current={item.current ? 'page' : undefined}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-black hover:bg-gray-700 hover:text-white',
+                          window.location.pathname === `/${item.href}` ? 'bg-gray-900 text-white' : 'text-black hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sans font-medium',
                         )}
                       >

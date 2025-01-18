@@ -2,6 +2,8 @@
 import './App.css';
 import JobMenu from './layout/JobMenu'
 import NavBar from './layout/NavBar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Resume from './layout/Resume';
 
 function App() {
   return (<div className='overflow-hidden'>
@@ -15,7 +17,14 @@ function App() {
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
         </main>
    
-    <JobMenu />
+   <Router>
+      <Routes>
+        <Route index path="/applied" element={<JobMenu />}></Route>
+        <Route path="/messages"></Route>
+        <Route path="/resume" element={<Resume />}></Route>
+      </Routes>
+   </Router>
+    
     
   </div>
   );
