@@ -8,9 +8,14 @@ module.exports = {
   }, 
   theme: {
     extend: {fontFamily:{
-      "sans":['Graphik Web'],
+      "sans":['Inter'],
       "mono": ['Menlo','monospace'],
-    }},
+      
+    },
+  colors:{
+    background: 'FFFAFA',
+    text: '0D0D0D'
+  }},
   },
   plugins: [],
 }

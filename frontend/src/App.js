@@ -10,7 +10,9 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
 const navigation = [
+  { name: 'Applied Jobs', href:'#', current: false },
   { name: 'Messages', href: '#', current: false },
+  { name: 'Resumé', href: '#', current: false}
  
 ]
 const userNavigation = [
@@ -25,23 +27,23 @@ function classNames(...classes) {
 function App() {
   return (
     <div className="min-h-full">
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-white-800">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center justify-end">
           <div className="flex items-center">
             <div className="shrink-0">
               
             </div>
             <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
+              <div className="ml-4 flex items-center md:ml-6">
                 {navigation.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'rounded-md px-3 py-2 text-sm font-medium',
+                      item.current ? 'bg-gray-900 text-white' : 'text-black hover:bg-gray-700 hover:text-white',
+                      'rounded-md px-3 py-2 text-sans font-medium',
                     )}
                   >
                     {item.name}
@@ -110,7 +112,7 @@ function App() {
               aria-current={item.current ? 'page' : undefined}
               className={classNames(
                 item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                'block rounded-md px-3 py-2 text-base font-medium',
+                'block rounded-md px-3 py-2 text-base font-sans font-medium',
               )}
             >
               {item.name}
@@ -153,7 +155,7 @@ function App() {
 
     <header className="bg-white shadow">
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900">Applied </h1>
+        <h1 className="text-3xl font-bold font-sans tracking-tight text-gray-900">Applied </h1>
       </div>
     </header>
     <main>
