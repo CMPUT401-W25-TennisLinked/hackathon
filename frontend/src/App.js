@@ -1,12 +1,13 @@
 
 import './App.css';
 import Header from './layout/PageHeader';
-import Tile from './layout/JobTile'
+import JobMenu from './layout/JobMenu'
 
 function App() {
   return (<div>
-    <Header />,
-    <Tile />
+    <Header />
+   
+    <JobMenu />
     
   </div>
   );
