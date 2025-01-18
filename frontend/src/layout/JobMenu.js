@@ -1,3 +1,5 @@
+import SearchBar from "./SearchBar"
+
 const Jobs = [
     { name: 'Job 1', status:'Applied'},
     { name: 'Job 2', status: 'Rejected' },
@@ -11,12 +13,10 @@ export default function JobMenu(){
     // Code adapted from https://tailwindflex.com/@lukas-muller/feature-showcase-cards 
     // SVG Icons from https://reactsvgicons.com/
     return( <div>
-    <button style={{float:'right', paddingRight:'11rem'}}>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
-    </svg>
+        <SearchBar />
     
-        </button>
+    
+        
     
     <div class="-mx-4 flex flex-wrap pt-10 p-40">
         {Jobs.map((item) =>(
@@ -43,7 +43,7 @@ export default function JobMenu(){
                 <div>
                     <h3 class="mb-4 text-xl font-bold text-black sm:text-2xl lg:text-xl xl:text-2xl">{item.name}
                     </h3>
-                    <p class="text-base font-medium text-body-color">...</p>
+                    <p class="mx-5 text-base font-medium text-body-color">...</p>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ import JobMenu from './layout/JobMenu'
 import NavBar from './layout/NavBar';
 
 function App() {
-  return (<div>
+  return (<div className='overflow-hidden'>
     <NavBar />
     <header className="bg-white shadow">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
