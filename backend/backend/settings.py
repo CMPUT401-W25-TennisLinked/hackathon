@@ -42,7 +42,11 @@ INSTALLED_APPS = [
     'notification',
     'response',
     'resume',
+<<<<<<< HEAD
+    'user',
+=======
     'user'
+>>>>>>> origin/main
 ]
 
 MIDDLEWARE = [
