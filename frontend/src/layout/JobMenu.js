@@ -25,7 +25,7 @@ export default function JobMenu() {
         <SearchBar />
 
         <div class="-mx-4 flex flex-wrap pt-10 p-40">
-            {applications.map((job) => (
+            {applications.length > 0 ? (applications.map((job) => (
                 <div class="w-full px-4 md:w-1/2 lg:w-3/2">
                     <div class="mb-9 rounded-xl py-8 px-7 shadow-md transition-all hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
                         <div style={{
@@ -54,8 +54,11 @@ export default function JobMenu() {
                         </div>
                     </div>
                 </div>
-            ))}
-
+            ))) : (
+                <div className="flex w-full justify-center h-full">
+                    <p>No applications yet!</p>
+                </div>
+            )}
         </div>
     </div>)
 }
