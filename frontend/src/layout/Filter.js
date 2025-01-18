@@ -4,8 +4,14 @@ import { Button} from '@headlessui/react'
 
 const options = [
     {name:'Date'},
-    {name:'Status' , description:['Applied','Rejection','Interview', 'Offer']},
+    {name:'Status' , description:['APPLIED','INTERVIEW','OFFER', 'REJECTION']},
   ]
+const statusColours = {
+    APPLIED: '#FFB347',
+    INTERVIEW: '#98FB98',
+    OFFER: '#87CEEB',
+    REJECTION: '#FFB6C1'
+}
 
 
 export default function Filter(){
@@ -38,8 +44,9 @@ export default function Filter(){
                   
                 </div>
                 {item.description?.map((option) =>(
-                    <div className="hover:bg-gray-50">
-                    <Button key={option} className="mt-1 text-gray-600 ">{option}</Button>
+                    <div style={{background: statusColours[option], borderRadius: '15px', color: 'black',
+                        justifyContent: 'center', alignContent: 'center', display: 'flex', fontFamily: 'monospace', fontWeight: 'bold', fontSize: '15px'}}>
+                    <Button key={option} className="mt-1 text-gray-600">{option}</Button>
                     </div>
                 
                 ))}
