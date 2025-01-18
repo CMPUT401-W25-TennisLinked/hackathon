@@ -17,11 +17,16 @@ export default function JobMenu() {
 
     useEffect(() => {
         fetch('/api/application/')
-        .then((res) => res.json())
-        .then((data) => setApplications(data.applications))
+            .then((res) => res.json())
+            .then((data) => setApplications(data.applications))
     }, []);
 
     return (<div>
+        <header className="bg-white shadow mb-8">
+            <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                <h1 className="text-3xl font-bold font-sans tracking-tight text-gray-900">Applied </h1>
+            </div>
+        </header>
         <SearchBar />
 
         <div class="-mx-4 flex flex-wrap pt-10 p-40">
