@@ -22,9 +22,19 @@ class JobApplicationFilterView(View):
         serializer = ApplicationSerializer(applications, many=True)
         return JsonResponse({'applications': serializer.data})
 
+
 class JobApplicationView(View):
 
     def get(self, request, app_id):
         application = get_object_or_404(Application, pk=app_id)
         serializer = ApplicationSerializer(application)
         return JsonResponse({'application': serializer.data})
+    
+    def put(self, request, app_id):
+        application = get_object_or_404(Application, pk=app_id)
+        data = request.POST
+        serializer = ApplicationSerializer(application, data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse({'application': serializer.data})
+        return JsonResponse({'errors': serializer.errors}, status=400)
