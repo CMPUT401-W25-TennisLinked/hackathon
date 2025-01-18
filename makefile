@@ -1,7 +1,6 @@
 # Variables
 BACKEND_DIR = backend
 FRONTEND_DIR = frontend
-CONCURRENTLY = npx concurrently
 
 # Default target
 all: run
@@ -15,7 +14,7 @@ install:
 # Run both frontend and backend
 .PHONY: run
 run:
-	$(CONCURRENTLY) "make backend" "make frontend"
+	cd $(FRONTEND_DIR) && npm start & cd $(BACKEND_DIR) && python manage.py runserver
 
 # Run the backend
 .PHONY: backend
